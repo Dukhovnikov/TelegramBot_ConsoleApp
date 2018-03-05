@@ -1,0 +1,47 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\Repositories\\TelegramBot_ConsoleApp\\TelegramBot_ConsoleApp\\TelegramBot_ConsoleApp.csproj",
+    "projectName": "TelegramBot_ConsoleApp",
+    "projectPath": "D:\\Repositories\\TelegramBot_ConsoleApp\\TelegramBot_ConsoleApp\\TelegramBot_ConsoleApp.csproj",
+    "outputPath": "D:\\Repositories\\TelegramBot_ConsoleApp\\TelegramBot_ConsoleApp\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.0"
+    ],
+    "frameworks": {
+      "netcoreapp2.0": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.0.0, )",
+          "autoReferenced": true
+        },
+        "Telegram.Bot": {
+          "target": "Package",
+          "version": "[14.0.0-rc-367, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

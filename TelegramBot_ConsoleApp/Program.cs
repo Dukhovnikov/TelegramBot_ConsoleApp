@@ -15,36 +15,67 @@ namespace TelegramBot_ConsoleApp
     {
         private static TelegramBotClient _client;
 
+        public static long ChatId { get; } = 425355122;
+
         private static void Main(string[] args)
         {
 
-            Main1();
+            //Main1();
+            Main3();
+            //TestExcludeMatrix();
+            //_client = new TelegramBotClient("493325045:AAF8Wu5VCb2iVMD-nzo9CtgQKcn9rYNPcMs");
+            //_client.SendTextMessageAsync(ChatId, "Hello!\nHow are you?\nGo to smoke!!!");
 
+            //Console.ReadKey();
 
 
         }
-
+        
         private static void Main1()
         {
             var bot = new TelegramApplication();
             bot.Run();
-        }        
-        private static void Main2()
-        {
-            _client = new TelegramBotClient("493325045:AAF8Wu5VCb2iVMD-nzo9CtgQKcn9rYNPcMs");
-            _client.OnMessage += BotOnMessageReceived;
-            _client.OnMessageEdited += BotOnMessageReceived;
-            _client.OnCallbackQuery += BotOnCallbackQueryReceived;
-            _client.OnInlineResultChosen += BotOnChosenInlineResultReceived;
-            _client.StartReceiving();
-            
-            Console.ReadLine();
-            
-            _client.StopReceiving(); 
-        }        
+        }              
         private static void Main3()
         {
+            var bot = new TelegramBot();
+            bot.Run();
+        }
 
+        private static void TestExcludeMatrix()
+        {
+            var matrix = new Matrix(new double[,]
+            {
+                {2 , 2 , 3 , 3},
+                {2 , 2 , 3 , 3},
+                {4 , 4 , 5 , 5},
+                {4 , 4 , 5 , 5},
+            });
+            Console.WriteLine(matrix);
+            Console.WriteLine();
+
+            //var newmatrix = matrix.Exclude(2, 2);
+            Console.WriteLine(
+                matrix.Exclude(matrix.Size - 1, matrix.Size - 1).Exclude(matrix.Size - 2, matrix.Size - 2));
+
+            Console.WriteLine(
+                matrix.Exclude(matrix.Size - 1, 0).Exclude(matrix.Size - 2, 0));
+
+            Console.WriteLine(
+                matrix.Exclude(0, matrix.Size - 1).Exclude(0, matrix.Size - 2));
+
+            Console.WriteLine(
+                matrix.Exclude(0, 0).Exclude(0, 0));
+
+
+        }
+
+        private static void TestUpSizeMatrix()
+        {
+            var m = Matrix.E(3);
+            
+            Console.WriteLine(m);
+            Console.WriteLine(m.UpSize());
         }
         
 /*        private static async void BotOnMessageReceived(object sender, MessageEventArgs messageEventArgs)

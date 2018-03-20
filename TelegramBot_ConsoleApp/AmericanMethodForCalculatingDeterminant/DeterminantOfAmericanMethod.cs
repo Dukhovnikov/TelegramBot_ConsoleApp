@@ -79,9 +79,7 @@ namespace TelegramBot_ConsoleApp
             }
 
             Logger += $"Стандартное решение: <b>{determinant}</b>\n";
-            Logger += $"Американским методом: <b>{Matrix[0, 0]}</b>\n";
-            
-            //return Matrix[0, 0];
+            Logger += $"Американским методом: <b>{Matrix[0, 0]}</b>\n";         
         }
 
         private static Matrix DownToRise(Matrix matrix)

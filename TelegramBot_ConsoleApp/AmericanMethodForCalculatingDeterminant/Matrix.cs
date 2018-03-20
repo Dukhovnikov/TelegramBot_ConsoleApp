@@ -389,5 +389,40 @@ namespace TelegramBot_ConsoleApp
         /// Реализация интерфейса
         /// </summary>
         bool INullable.IsNull => _matrix == null;
+
+        public double[,] ToDoubleMass()
+        {
+            return _matrix;
+        }
+
+        public int[,] ToIntMass()
+        {
+            var intmatrix = new int[Size, Size];
+
+            for (var i = 0; i < Size; i++)
+            {
+                for (var j = 0; j < Size; j++)
+                {
+                    intmatrix[i, j] = (int) _matrix[i, j];
+                }
+            }
+
+            return intmatrix;
+        }
+
+        public Matrix UpSize()
+        {
+            var upSizeMatrix = new Matrix(Size + 1);
+
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    upSizeMatrix[i, j] = this[i, j];
+                }
+            }
+
+            return upSizeMatrix;
+        }
     }
 }

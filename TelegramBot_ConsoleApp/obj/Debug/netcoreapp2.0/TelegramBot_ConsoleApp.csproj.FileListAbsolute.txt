@@ -28,3 +28,4 @@ D:\Repositories\TelegramBot_ConsoleApp\TelegramBot_ConsoleApp\obj\Debug\netcorea
 D:\Repositories\TelegramBot_ConsoleApp\TelegramBot_ConsoleApp\obj\Debug\netcoreapp2.0\TelegramBot_ConsoleApp.AssemblyInfo.cs
 D:\Repositories\TelegramBot_ConsoleApp\TelegramBot_ConsoleApp\obj\Debug\netcoreapp2.0\TelegramBot_ConsoleApp.dll
 D:\Repositories\TelegramBot_ConsoleApp\TelegramBot_ConsoleApp\obj\Debug\netcoreapp2.0\TelegramBot_ConsoleApp.pdb
+D:\Repositories\TelegramBot_ConsoleApp\TelegramBot_ConsoleApp\obj\Debug\netcoreapp2.0\TelegramBot_ConsoleApp.csprojResolveAssemblyReference.cache

@@ -8,6 +8,7 @@
         <e p="AmericanMethodForCalculatingDeterminant" t="Include">
           <e p="DeterminantOfAmericanMethod.cs" t="Include" />
           <e p="DVector.cs" t="Include" />
+          <e p="KaratsubaAlgorithm.cs" t="Include" />
           <e p="Matrix.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
@@ -23,8 +24,14 @@
         </e>
         <e p="Paskal.cs" t="Include" />
         <e p="Program.cs" t="Include" />
+        <e p="StatesImplement.cs" t="Include" />
+        <e p="StrassenAlgorithm.cs" t="Include" />
         <e p="TelegramApplication.cs" t="Include" />
+        <e p="TelegramBot.cs" t="Include" />
         <e p="TelegramBot_ConsoleApp.csproj" t="IncludeRecursive" />
+        <e p="TelegramBotData.cs" t="Include" />
+        <e p="TelegramBotState.cs" t="Include" />
+        <e p="TelegramBotUser.cs" t="Include" />
       </e>
       <e p="TelegramBot_ConsoleApp.sln" t="IncludeFlat" />
     </e>

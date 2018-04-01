@@ -9,15 +9,6 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace TelegramBot_ConsoleApp
 {
-/*    public enum TelegramBotStateEnum
-    {
-        MainMenu,
-        DibisibilityCriteriaMenu,
-        DibisibilityCriteriaPaskal,
-        DibisibilityCriteriaRachinskii1
-    }*/
-
-
     public enum TelegramBotStateEnum
     {
         MainMenu,
@@ -38,9 +29,8 @@ namespace TelegramBot_ConsoleApp
     public class TelegramBot
     {
         private readonly TelegramBotClient _bot;
-        private const string Token = "Your token!";
+        private const string Token = "your token";
         public TelegramBotState State { get; set; }
-        public TelegramBotStateEnum StateEnum { get; set; }
         private TelegramBotData UserLibrary { get; set; }
         
         private Matrix AMatrix { get; set; }
@@ -283,6 +273,11 @@ Please, write to creator for access.";
             
         }
 
+        private async void BotOnMessageReceivedStates(object sender, MessageEventArgs messageEventArgs)
+        {
+            
+        }
+
         private async void BotOnCallbackQueryReceivedSwitch(object sender, CallbackQueryEventArgs callbackQueryEventArgs)
         {
             var message = callbackQueryEventArgs.CallbackQuery.Message;
@@ -420,16 +415,11 @@ Please, write to creator for access.";
             else
             {
                 var userState = UserLibrary.GetTelegramBotUserState(username);
-                SetState(userState);
+                //SetState(userState);
             }
             
             Console.WriteLine(message.Chat.Id);
-            State.Response(_bot, messageEventArgs);
+            //State.Response(_bot, messageEventArgs);
         }
-
-        private void SetState(TelegramBotStateEnum telegramBotStateEnum)
-        {
-        }
-
     }
 }

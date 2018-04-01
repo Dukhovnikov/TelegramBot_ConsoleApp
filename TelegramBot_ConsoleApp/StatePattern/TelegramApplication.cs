@@ -9,8 +9,9 @@ namespace TelegramBot_ConsoleApp
 {
     public class TelegramApplication
     {
-        private readonly TelegramBotClient _bot;
-        private const string Token = "493325045:AAF8Wu5VCb2iVMD-nzo9CtgQKcn9rYNPcMs";
+        private const string Token = "your token";
+        private readonly TelegramBotClient _bot = new TelegramBotClient(Token);
+        private TelegramBotState State { get; set; }
 
         private readonly ReplyKeyboardMarkup _replyKeyboard = new[]
         {
@@ -37,12 +38,7 @@ namespace TelegramBot_ConsoleApp
                     InlineKeyboardButton.WithCallbackData("Назад", "GoToMainMenu")
                 }
             }
-        );
-        
-        public TelegramApplication()
-        {
-            _bot = new TelegramBotClient(Token);
-        }
+        );        
 
         public void Run()
         {
@@ -70,6 +66,8 @@ namespace TelegramBot_ConsoleApp
 
         private async void BotOnMessageReceivedNew(object sender, MessageEventArgs messageEventArgs)
         {
+            var message = messageEventArgs.Message;
+
             
         }
         

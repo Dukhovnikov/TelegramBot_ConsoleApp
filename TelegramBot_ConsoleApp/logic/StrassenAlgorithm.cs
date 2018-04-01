@@ -219,7 +219,7 @@ namespace TelegramBot_ConsoleApp
             WriteLineLogger(a22.ToString());
             WriteLineLogger("<a href=\"http://www.example.com/\">   *</a>");
             WriteLineLogger((b21 - b11) + "\n");
-            WriteLineLogger(d6.solve);
+            WriteLineLogger(d7.solve);
             
             
             var c11 = d1.matrix + d2.matrix - d4.matrix + d7.matrix;
@@ -305,7 +305,7 @@ namespace TelegramBot_ConsoleApp
                         A11[i, j] = A[i, j];
                     } else if (j > 1 && i < 2)
                     {
-                        A12[i, j-2] = A[i, j];
+                        A12[i, j-2] = A[i, j];+
                     } else if (j < 2 && i > 1)
                     {
                         A21[i-2, j] = A[i, j];

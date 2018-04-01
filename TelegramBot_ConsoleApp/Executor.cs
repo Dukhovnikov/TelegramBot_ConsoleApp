@@ -5,17 +5,7 @@ using TelegramBot_ConsoleApp;
 using static System.String;
 
 namespace TelegramBot_ConsoleApp
-{
-    public enum TypeMethod
-    {
-        AmericanDeterminant,
-        DivisibilityCriteria,
-        VolkerStrassenAlhoritm,
-        Karatsuba,
-        Default 
-        
-    }
-    
+{    
     public static class Executor
     {
         private static string ErrorTextAboutRachinskiy = @"

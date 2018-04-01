@@ -5,16 +5,18 @@
     <e p="D:\Repositories\TelegramBot_ConsoleApp" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="TelegramBot_ConsoleApp" t="IncludeRecursive">
-        <e p="AmericanMethodForCalculatingDeterminant" t="Include">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Executor.cs" t="Include" />
+        <e p="logic" t="Include">
+          <e p="CriterionsForDivisibility.cs" t="Include" />
+          <e p="DecomposedNumber.cs" t="Include" />
           <e p="DeterminantOfAmericanMethod.cs" t="Include" />
           <e p="DVector.cs" t="Include" />
           <e p="KaratsubaAlgorithm.cs" t="Include" />
           <e p="Matrix.cs" t="Include" />
+          <e p="Paskal.cs" t="Include" />
+          <e p="StrassenAlgorithm.cs" t="Include" />
         </e>
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="CriterionsForDivisibility.cs" t="Include" />
-        <e p="DecomposedNumber.cs" t="Include" />
-        <e p="Executor.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
@@ -22,15 +24,17 @@
             </e>
           </e>
         </e>
-        <e p="Paskal.cs" t="Include" />
         <e p="Program.cs" t="Include" />
-        <e p="StatesImplement.cs" t="Include" />
-        <e p="StrassenAlgorithm.cs" t="Include" />
-        <e p="TelegramApplication.cs" t="Include" />
-        <e p="TelegramBot.cs" t="Include" />
+        <e p="StatePattern" t="Include">
+          <e p="StatesImplement.cs" t="Include" />
+          <e p="TelegramApplication.cs" t="Include" />
+          <e p="TelegramBotState.cs" t="Include" />
+        </e>
+        <e p="Switch" t="Include">
+          <e p="TelegramBot.cs" t="Include" />
+        </e>
         <e p="TelegramBot_ConsoleApp.csproj" t="IncludeRecursive" />
         <e p="TelegramBotData.cs" t="Include" />
-        <e p="TelegramBotState.cs" t="Include" />
         <e p="TelegramBotUser.cs" t="Include" />
       </e>
       <e p="TelegramBot_ConsoleApp.sln" t="IncludeFlat" />

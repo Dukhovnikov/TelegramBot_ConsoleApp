@@ -9,12 +9,13 @@ namespace TelegramBot_ConsoleApp
 {
     public class MainMenuState : TelegramBotState
     {
-        public MainMenuState(TelegramBot telegramBot) : base(telegramBot)
+        public MainMenuState(TelegramApplication telegramBot) : base(telegramBot)
         {
+            
         }
 
 
-        public override void CallbackKeyboard(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
+        public void CallbackKeyboard(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
         {
             ReplyKeyboardMarkup replyKeyboard = new[]
             {
@@ -30,7 +31,7 @@ namespace TelegramBot_ConsoleApp
                 replyMarkup: replyKeyboard, parseMode: ParseMode.Html);
         }
 
-        public override void Response(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
+        public void Response(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
         {
             ReplyKeyboardMarkup replyKeyboard = new[]
             {
@@ -62,6 +63,11 @@ namespace TelegramBot_ConsoleApp
                 //await _bot.SendTextMessageAsync(message.Chat.Id, "<i>Признаки делимости</i>", replyMarkup: _replyKeyboardDivisibility, parseMode: ParseMode.Html); 
             }
         }
+
+        public override string Response(string data)
+        {
+            return "Please, choose item!";
+        }
     }
 
     public class DivisibilityCriteriaMenu : TelegramBotState
@@ -70,12 +76,12 @@ namespace TelegramBot_ConsoleApp
         {
         }
 
-        public override void CallbackKeyboard(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
+        public void CallbackKeyboard(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
         {
             throw new NotImplementedException();
         }
 
-        public override void Response(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
+        public void Response(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
         {
             ReplyKeyboardMarkup replyKeyboardDivisibility = new[]
             {
@@ -105,6 +111,11 @@ namespace TelegramBot_ConsoleApp
                     replyMarkup: replyKeyboardDivisibility, parseMode: ParseMode.Html);
             }
         }
+
+        public override string Response(string data)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class DivisibilityCriteriaPaskal : TelegramBotState
@@ -113,12 +124,12 @@ namespace TelegramBot_ConsoleApp
         {
         }
 
-        public override void CallbackKeyboard(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
+        public void CallbackKeyboard(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
         {
             throw new NotImplementedException();
         }
 
-        public override void Response(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
+        public void Response(TelegramBotClient telegramBotClient, MessageEventArgs messageEventArgs)
         {
             var message = messageEventArgs.Message;
 
@@ -128,6 +139,11 @@ namespace TelegramBot_ConsoleApp
             
             
             
+        }
+
+        public override string Response(string data)
+        {
+            throw new NotImplementedException();
         }
     }
 }
